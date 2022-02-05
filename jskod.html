@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>Strona Szkoleniowa</title>
+	
+	<meta name="description" content="Opis w Google" />
+	<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
+
+	<script src="jquery-2.1.4.js"></script>
+	<style tyoe="text/css">
+    body{
+	  background-image:url("https://wallpapercave.com/wp/wp8320812.jpg");
+	  background-size:100%;
+	  background-repeat: no-repeat;
+	  background-color:#212121;
+	}
+	.inf{
+     margin-top: 7vw;
+	 color: white;
+	 font-family: 'Courier New', monospace;
+	 letter-spacing:0.13vw;
+	}
+	.imie{
+	 color: white;
+	 font-family: 'Courier New', monospace;
+	 font-size:0.8vw;
+	 letter-spacing:0.2vw;
+	}
+    .btn button, .btn2 button{
+	 margin-top: 4vw;
+     position: relative;
+     display: block;
+     border-color: white;
+     color: white;
+     background: #222;
+     padding: 17px 60px;
+     font-size: 22px;
+     font-weight: 700;
+     text-transform: uppercase;
+     outline: none;
+     cursor: pointer;
+     box-shadow: 0 5px 15px rgba(0,0,0,.2);
+     overflow: hidden;
+    }
+    button:hover{
+     box-shadow: 0 5px 30px rgba(0,0,0,.2);
+    }
+    .btn button:after, .btn2 button:after{
+     position: absolute;
+     content: '';
+     left: 0;
+     top: 0;
+     height: 490%;
+     width: 140%;
+     transition: all .5s ease-in-out;
+    }
+    .btn button:after, .btn2 button:after{
+     background: #8f8f8f;
+     transform: translate(-98%, -25%) rotate(45deg);
+    }
+    .btn:hover button:after, .btn2:hover button:after{
+     transform: translate(-9%, -25%) rotate(45deg);
+    }
+    button span{
+     position: relative;
+     z-index: 1;
+    }
+	
+	.program{
+	margin-left:45.01vw;
+	color:white;
+	font-family: 'Courier New', monospace;
+	}
+	p{font-family: 'Courier New', monospace;
+	}
+	input[type=text] {
+    width: 60px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 4px;
+	background-color: #8f8f8f;
+    }
+	.liczby{margin-left:30px;}
+	#nwd{font-size:1.5vw;
+	color:white;
+	font-family: 'Brush Script MT', cursive;}
+	.wynik{margin-left:40px;}
+
+	
+	</style>
+	
+
+	
+</head>
+
+
+
+<body>
+<div class="imie">
+<h3><center>KAJETAN KOWALSKI</center></h3>
+</div>
+<div class="inf">
+<h3><center><strong>ALGORYTM EUKLIDESA</strong></center></h3>
+<h2><center>● JAVASCRIPT ● </center> </h2>
+</div>
+<div class="program">
+<p>PODAJ DWIE LICZBY</p>
+<p>
+<div class="liczby">
+A: <input type="text" id="a" value="0"><br />
+B: <input type="text" id="b" value="0"><br />
+</div>
+</p>
+</br>
+<div class="wynik">
+NWD: <span id="nwd"></span><br />
+</div>
+</div>
+<div class="btn2">
+<center><button onclick="policz()">OBLICZ</button></center>
+</div>
+
+<script>
+function nwd(a, b) {
+if(a == 0)
+return b;
+return nwd(b%a, a);
+}
+function policz() {
+var _a = document.getElementById('a').value;
+var _b = document.getElementById('b').value;
+
+document.getElementById('nwd').innerHTML = nwd(_a, _b);
+}
+</script>
+
+<div class="btn">
+      <center><button onclick="location.href='jskod2.html'"><span>POWRÓT</span></button></center>
+</div>
+
+</body>
+</html>
