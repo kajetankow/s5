@@ -96,7 +96,7 @@
 	.kod{
 	display: inline-block;
 	background-color:white;
-	margin-left:38.4vw;
+	margin-left:36.5vw;
 	
 	}
 
@@ -118,17 +118,20 @@
 <h2><center>● JAVASCRIPT ● </center> </h2>
 </div>
 <div class="kod">
-<pre style="width:100%;padding:0px" id="codeblock"><code style="width:100%">function nwd(a, b) &lcub;
-if(a == 0)
-return b;
-return nwd(b%a, a);
-&rcub;
-function policz() &lcub;
-var _a = document.getElementById('a').value;
-var _b = document.getElementById('b').value;
-
-document.getElementById('nwd').innerHTML = nwd(_a, _b);
-&rcub;</code></pre>
+<pre style="margin: 0; line-height: 125%">
+	<span style="color: #000080; font-weight: bold">function</span> NWD()
+	{
+		<span style="color: #000080; font-weight: bold">var</span> a = document.getElementById(<span style="color: #0000FF">&quot;a&quot;</span>).value;
+		<span style="color: #000080; font-weight: bold">var</span> b = document.getElementById(<span style="color: #0000FF">&quot;b&quot;</span>).value;
+		<span style="color: #000080; font-weight: bold">var</span> w = <span style="color: #0000FF">&quot;&quot;</span>;
+		
+		<span style="color: #000080; font-weight: bold">while</span>(a&lt;b) b -= a <span style="color: #000080; font-weight: bold">else</span> a -= b;
+		<span style="color: #000080">t = a</span>;
+		
+		document.getElementById(<span style="color: #0000FF">&quot;wynik&quot;</span>).innerHTML = w;
+		
+	}
+</pre>
 </div>
 
 <div class="opcje">
